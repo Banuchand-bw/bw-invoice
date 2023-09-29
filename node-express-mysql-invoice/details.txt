@@ -1,0 +1,15 @@
+If you want to use sequelize-auto without creating a separate configuration file, you can pass the database connection details directly as command-line arguments. Here's how you can use sequelize-auto in Node.js with MySQL without creating a configuration file:
+
+npx sequelize-auto -h localhost -d bw_invoice -u root -x root -e mysql -o .\app\models\
+
+Explanation of the command:
+
+-h specifies the host where your MySQL database is located.
+-d specifies the name of your database.
+-u specifies the username to access the database.
+-x specifies the password for the database user.
+-e specifies the database dialect (in this case, "mysql").
+-o specifies the output directory where the generated models will be saved.
+After running this command, sequelize-auto will connect to your MySQL database, introspect the schema, and generate Sequelize model files in the specified output directory (.\app\models\ in this example).
+
+Once the models are generated, you can use them in your Node.js application as described in the previous responses.
